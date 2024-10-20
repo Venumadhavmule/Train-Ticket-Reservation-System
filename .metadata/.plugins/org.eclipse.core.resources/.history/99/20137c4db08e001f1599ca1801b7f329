@@ -1,0 +1,27 @@
+package com.venu.util;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity(name = "train")
+public class TrainBean {
+	@Id
+	private int trainNo;
+	private String trainName;
+	private String trainFrom;
+	private String trainTo;
+
+	public TrainBean() {
+		
+	}
+
+	public TrainBean(int trainNo, String trainName, String trainFrom, String trainTo) {
+		this.trainNo = trainNo;
+		this.trainName = trainName;
+		this.trainFrom = trainFrom;
+		this.trainTo = trainTo;
+	}
+	
+	
+
+}

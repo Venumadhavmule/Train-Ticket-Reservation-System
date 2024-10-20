@@ -1,0 +1,20 @@
+package com.venu.util;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity(name = "train")
+public class TrainBean {
+	@Id
+	private int trainNo;
+	private String trainName;
+	private String trainFrom;
+	private String trainTo;
+
+	public TrainBean() {
+		
+	}
+	
+	
+
+}

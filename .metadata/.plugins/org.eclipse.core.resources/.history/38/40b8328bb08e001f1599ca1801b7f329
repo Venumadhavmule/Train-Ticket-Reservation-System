@@ -1,0 +1,6 @@
+package com.venu.model;
+
+public class Snippet {
+	private String trainFrom;
+}
+

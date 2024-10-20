@@ -1,0 +1,31 @@
+package com.venu.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.venu.model.UserBean;
+import com.venu.util.UhbCon;
+
+public class UserDao {
+	     // saveUser
+		// getAllUsers
+		// getUserById
+		// UpdateUser
+		// DeleteUser
+	
+	public void saveUser(UserBean user) {
+		Transaction transaction = null;
+		try (Session session = UhbCon.getConnection().openSession()){
+			transaction = session.beginTransaction();
+			session.save(user);
+			transaction.commit();
+			
+		}catch (Exception e) {
+			if(transaction !=null) {
+				transaction.rollback();
+			}
+			
+		}
+	}
+}

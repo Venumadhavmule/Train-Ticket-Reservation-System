@@ -1,0 +1,12 @@
+package com.venu.util;
+
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+
+import com.venu.model.UserBean;
+
+public class UhbCon {
+	public Session getConnection() {
+		Configuration con = new Configuration().configure().addAnnotatedClass(getClass(UserBean.class))
+	}
+}

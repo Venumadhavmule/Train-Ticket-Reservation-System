@@ -1,0 +1,5 @@
+package com.venu.dao;
+
+public class UserDao {
+
+}

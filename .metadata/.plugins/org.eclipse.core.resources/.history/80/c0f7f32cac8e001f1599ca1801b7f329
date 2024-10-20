@@ -1,0 +1,28 @@
+package com.venu.TrainRes;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
+
+import jakarta.transaction.Transaction;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        Configuration con= new Configuration().configure().addAnnotatedClass(User.class);
+        ServiceRegistry reg = new StandardServiceRegistryBuilder().applySettings(con.getProperties()).build();
+        
+        SessionFactory sf = con.buildSessionFactory(reg);
+        
+        Session session = sf.openSession();
+        
+        org.hibernate.Transaction tx = session.beginTransaction();
+    }
+}

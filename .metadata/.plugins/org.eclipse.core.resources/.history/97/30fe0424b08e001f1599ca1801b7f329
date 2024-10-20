@@ -1,0 +1,7 @@
+package com.venu.util;
+
+public class TrainBean {
+	@Id
+	private int trainNo;
+	
+}
